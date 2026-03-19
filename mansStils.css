@@ -1,0 +1,41 @@
+body{
+    background-image: url(/portfolio/dark-low-contrast-wallpaper-many-rods-grayscale-decorative-background_183270-1199.avif);
+    color: white;
+    text-align: center;
+   
+    
+}
+#yes{
+font-weight: bold;
+font-size: 100px;
+padding-top: 50px;
+padding-bottom: 200px;
+}
+#yea{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+p{
+    padding-left: 300px;
+    padding-right: 300px;
+    font-size: 20px;
+}
+img{
+    height: 400px;
+    width: auto
+}
+video{
+     height: 400px;
+    width: auto
+
+}
+#plakats{
+    height: 1000px;
+    width: auto;
+}
+#aha{
+    font-size: 20px;
+    padding-left: 35%;
+    text-align: left;
+}
