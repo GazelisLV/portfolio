@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+</head>
+<body>
+    <h1>Informācijas daudzuma mērvienības</h1>
+    <form>
+        <p><input type="text" name="gb" id="gb">GB=</p>
+        <p><input onclick="rez.value=gb.value*1000" type="button" name="mb" id="mb" value="Izteikt megabaitos"><input type="text" name="rez" id="mb">MB</p>
+        <p><input onclick="rea.value=gb.value*953.674316406" type="button" name="mib" id="mib" value="Izteikt mibibaitos"><input type="text" name="rea" id="mib">MiB</p>
+    </form>
+    <style>
+        body {
+            background: url(cipari.jpg);
+        }
+        form{
+            font-size: 20px;  
+            background-color:  rgb(220,220,0)
+        }
+    </style>
+</body>
+</html>
