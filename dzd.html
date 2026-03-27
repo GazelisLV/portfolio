@@ -7,29 +7,33 @@
 </head>
 <body>
     <hr>
-    <form>
+    
         <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
-        <p>Gads <input type="text" name="gads" id="gads"></p>
-        <p>Mēnesis <input type="text" name="menesis" id="menesis"></p>
-        <p>Diena <input type="text" name="diena" id="diena"></p>
-        <p>Aprēķināt dienu skaitu līdz dzimšanas dienai <input value="spied" onclick=dienas();”  type="button" name="poga" id="poga"></p>
-        <p>Līdz svētkiem atlikušas <input type="text" name="dienas" id="dienas"></p>
+        <p>Gads <input type="number" name="gads" id="year"></p>
+        <p>Mēnesis <input type="number" name="menesis" id="month"></p>
+        <p>Diena <input type="number" name="diena" id="day"></p>
+        <p>Aprēķināt dienu skaitu līdz dzimšanas dienai <button onclick="dienas()">Spied</button></p>
+        <p>Līdz svētkiem atlikušas <input type="value" name="dienas" id="dienas">dienas : ))</p>
         <script> 
             function dienas() {
 
-    const year = document.getElementById('gads').value;
-    const month = document.getElementById('menesis').value ; 
-    const day = document.getElementById('diena').value;
+    const year = document.getElementById("year").value;
+    const month = document.getElementById("month").value ; 
+    const day = document.getElementById("day").value;
 
   
-    const targetDate = new Date(gads, menesis, diena);
+  const target = new Date(year, month - 1, day);
     const today = new Date();
 
-    const diffInDays = targetDate - today;
-    document.getElementById('dienas').innerText = 
+    const diffInDays = target - today;
+    const diffDays = Math.ceil(diffInDays / (1000 * 60 * 60 * 24));
+
+    document.getElementById("dienas").value = 
+     diffDays >= 0
+        ? diffDays
+        : "Jau bijusi";
             }
         </script>
-      <p>dienas : ))</p>
-    </form>
+    
 </body>
 </html>
